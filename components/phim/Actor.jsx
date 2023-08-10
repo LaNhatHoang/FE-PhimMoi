@@ -9,7 +9,7 @@ const Actor = ({ creator, directors, actors}) => {
                     directors.map((director, index) => (
                         <div key={index} style={{ minHeight: '70px' }} className="w-full border-b c-border overflow-hidden relative float-left mb-2.5 pb-2.5 pt-1.5 pl-[73px] xnm:pt-2.5">
                             <div className="absolute top-0 left-0 w-[60px] h-[60px] overflow-hidden">
-                                <Image className="w-full h-auto mt-[-15px]" src={director.urlImg} alt={director.name} width={92} height={138}/>
+                                <Image className="w-full h-auto mt-[-15px]" src={director.urlImg} alt={""} width={92} height={138}/>
                                 {/* <img className="w-full h-auto mt-[-15px]" src={director.urlImg} alt={director.name} /> */}
                             </div>
                             <div className="data pr-5 overflow-hidden">
@@ -26,7 +26,7 @@ const Actor = ({ creator, directors, actors}) => {
                     actors.map((actor, index) => (
                         <div key={index} style={{ minHeight: '70px' }} className="w-full xnm:w-1/2 2xl:w-1/3 border-b c-border overflow-hidden relative float-left mb-2.5 pb-2.5 pt-1.5 pl-[73px] xnm:pt-2.5">
                             <div className="absolute top-0 left-0 w-[60px] h-[60px] overflow-hidden">
-                                <Image className="w-full h-auto mt-[-15px]" src={actor.urlImg} alt={actor.name} width={92} height={138}/>
+                                <Image className="w-full h-auto mt-[-15px]" src={actor.urlImg} alt={""} width={92} height={138}/>
                                 {/* <img className="w-full h-auto mt-[-15px]" src={actor.urlImg} alt={actor.name} /> */}
                             </div>
                             <div className="data pr-5 overflow-hidden">
