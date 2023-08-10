@@ -1,11 +1,13 @@
 /** @type {import('next').NextConfig} */
 
+const baseUrl = "http://13.215.250.48/api/v1/file"
+
 module.exports = {
     async rewrites() {
         return [
             {
                 source: '/api/image/:name',
-                destination: 'http://52.221.182.94/api/v1/file/image/:name',
+                destination: `${baseUrl}/image/:name`,
             },
         ]
     },
