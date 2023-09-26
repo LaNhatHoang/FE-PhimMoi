@@ -37,7 +37,7 @@ const PhimBo = ({ data, phimRandom }) => {
                     <Path type={"Phim bộ"} url={"/phim-bo"} name={data.name} />
                     <Poster
                         name={data.name} nameEng={data.nameEng} urlImage={data.urlImage} createAt={data.createAt}
-                        categorys={data.categorys} normalizeVietnamese={normalizeVietnamese} star={data.star}
+                        categorys={data.categories} normalizeVietnamese={normalizeVietnamese} star={data.star}
                         sub={data.sub} review={data.review}
                     />
                     <Info

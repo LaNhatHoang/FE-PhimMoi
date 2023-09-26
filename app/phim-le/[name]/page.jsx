@@ -28,7 +28,7 @@ const Page = async ({ params }) => {
             <Movie server={data.servers} />
             <Poster
                 name={data.name} nameEng={data.nameEng} urlImage={data.urlImage} createAt={data.createAt}
-                categorys={data.categorys} normalizeVietnamese={normalizeVietnamese} star={data.star}
+                categorys={data.categories} normalizeVietnamese={normalizeVietnamese} star={data.star}
                 time={data.time} country={data.country} rated={data.rated} review={data.review}
             />
             <Info descriptions={data.descriptions} directors={data.directors} actors={data.actors} urlTrailer={data.urlTrailer} />

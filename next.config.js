@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const baseUrl = "http://13.215.250.48/api/v1/file"
+const baseUrl = "https://api.nhathoang.xyz/api/v1/file"
 
 module.exports = {
     async rewrites() {

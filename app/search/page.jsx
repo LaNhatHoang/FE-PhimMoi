@@ -8,8 +8,12 @@ const getPhim = async (baseUrl, searchValue) => {
     if (!searchValue) {
         searchValue = ""
     }
-    const res = await fetch(`${baseUrl}/search/page/0/30?search=${searchValue}`)
-    return res.json()
+    try {
+        const res = await fetch(`${baseUrl}/search/page/0/30?search=${searchValue}`)
+        return res.json()
+    } catch (err) {
+        return
+    }
 }
 
 export const revalidate = 1
@@ -25,14 +29,14 @@ const Page = async ({ searchParams }) => {
             <FormSearch value={searchValue} />
             {
                 phim.content.length == 0 ? <NoSearch value={searchValue} />
-                :
-                <>
-                    <Search data={phim.content} />
-                    {phim.totalPages > 1 ? 
-                        <Pagination url={`/search`} param={`?s=${searchValue}`} current={phim.number + 1} total={phim.totalPages} /> 
-                        : <></>
-                    }
-                </>
+                    :
+                    <>
+                        <Search data={phim.content} />
+                        {phim.totalPages > 1 ?
+                            <Pagination url={`/search`} param={`?s=${searchValue}`} current={phim.number + 1} total={phim.totalPages} />
+                            : <></>
+                        }
+                    </>
             }
 
 
